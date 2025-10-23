@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4w7h3st8mh0o"]
+
+[ext_resource type="PackedScene" uid="uid://d32tch35exg7h" path="res://set_selector/set_selector.tscn" id="1_tk2d0"]
+
+[node name="SetSelectorScrollContainer" type="ScrollContainer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 259.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SetSelector" parent="." instance=ExtResource("1_tk2d0")]
+layout_mode = 2
+size_flags_horizontal = 4

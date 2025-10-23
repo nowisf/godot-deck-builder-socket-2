@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // raíz del proyecto
+    "paths": {
+      "@db/*": ["./src/infrastructure/database/*"],
+      "@sockets/*": ["./src/infrastructure/sockets/*"],
+      "@domain/*": ["./src/domain/*"],
+      "@infrastructure/*": ["./src/infrastructure/*"],
+      "@services/*": ["./src/services/*"],
+      "@dto/*": ["./src/dto/*"]
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

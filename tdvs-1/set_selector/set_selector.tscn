@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d32tch35exg7h"]
+
+[ext_resource type="Script" uid="uid://cy2vtkfikrjq2" path="res://set_selector/set_selector.gd" id="1_4lsap"]
+[ext_resource type="PackedScene" uid="uid://dtrv3peg2hcf5" path="res://set_selector/set_seleccionable/set_seleccionable.tscn" id="2_ttco5"]
+
+[node name="SetsSeleccionables" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_4lsap")
+set_seleccionable_scene = ExtResource("2_ttco5")

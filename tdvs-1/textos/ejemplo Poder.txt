@@ -1,0 +1,30 @@
+(1) la prioridad de los poderes de una ficha son su index en su arreglo poderes
+si no tiene objetivos validos se omite
+
+	 ~poderes = [golpear, lanzar, avanzar ]
+
+
+(2) los poderes no pueden contener buffs, pero pueden depender de stats o pasivas de su 
+portador
+
+	~Un poder que agregue una etiqueta/contador y su daño aumente segun esta
+
+
+(3) Accion = [Efectos] y [criteriosParaSeleccionarDeObjetivos]
+
+fn realizarAccionFicha(Accion, FichaAccionadora, HabilidadAccionadora)
+	objetivos = []
+	
+**accion.filtro es usado en algunos capturadores
+	for capturador in Accion.capturadoresDeObjetivos
+		switch(capturador.tipo)
+			case "lanzador":
+				objetivos.append(Ficha)
+			(...)
+	for efecto in accion.efecto:
+		for objetivo in objetivos
+			aplicarEfecto(efecto, objetivo)
+		
+fn aplicarEfecto(efecto, objetivo)
+
+fn realizarPoder(Habilidad, FichaAccionadora )

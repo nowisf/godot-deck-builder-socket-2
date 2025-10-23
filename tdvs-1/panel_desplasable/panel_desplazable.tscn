@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbp17g14a0sys"]
+
+[ext_resource type="Script" uid="uid://gwxx7c8qkos2" path="res://panel_desplasable/panel_desplazable.gd" id="1_dn86j"]
+
+[node name="PanelDesplazable" type="Panel"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 259.0
+offset_top = 34.0
+offset_right = -1.0
+offset_bottom = 605.0
+grow_horizontal = 2
+script = ExtResource("1_dn86j")
+
+[node name="TimerAntiSolapamiento" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="TimerAntiSolapamiento" to="." method="_on_timer_anti_solapamiento_timeout"]

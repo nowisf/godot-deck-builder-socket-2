@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8h4xkq3gyki0"]
+
+[ext_resource type="Script" uid="uid://da00g0558u1x0" path="res://juego/ficha/ficha.gd" id="1_laaii"]
+[ext_resource type="Texture2D" uid="uid://djtqbe35h5xfo" path="res://imagenes/sapitoPom.png" id="2_20lwp"]
+
+[node name="Ficha" type="Node2D"]
+script = ExtResource("1_laaii")
+
+[node name="imagen" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 1
+texture = ExtResource("2_20lwp")
+
+[node name="Camera2D" type="Camera2D" parent="imagen"]
+unique_name_in_owner = true
+ignore_rotation = false
+enabled = false

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FichaResource" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://imagenes/sapitoPomPiel.png" id="1_smi05"]
+[ext_resource type="Texture2D" path="res://imagenes/SapitoPiel mazo.png" id="2_ab1no"]
+[ext_resource type="Script" path="res://Juego2/Fichas/Ejemplares/ficha_resource.gd" id="3_qxp64"]
+
+[resource]
+script = ExtResource("3_qxp64")
+imagenFicha = ExtResource("1_smi05")
+imagenSet = ExtResource("2_ab1no")
+id = 10
+nombre = "Sapito Piel"
+coste = 1

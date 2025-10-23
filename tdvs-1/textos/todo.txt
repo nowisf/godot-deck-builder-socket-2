@@ -1,0 +1,58 @@
+#######RECUERDA GUARDAR
+[] deslisamiento para presentar interfases
+[] Habilidad: solo avanza en el rango de tus torres, pierde esta habilidad al recivir daño
+
+
+
+#Stats de poderes
+**creo que los poderes son cada uno una puta funcion
+	[]Rango (determina area dentro de la cual se puede ser objetivo)
+	[]Filtro de objetivos
+	[]N°objetivos  **La diferencia de area es que N°Objetivos puede darle a lo que sea
+		dentro del rango hasta cumplir N° o no queden objetivos**
+	[]Tipos (fuego,agua,meele,magia etc)
+	[]enfriamiento ¿Auto aumentarX(cd)StatY?
+	[]IdsEfectos (empujarX curarX dañarX AreaXobjetivosMaximosY)
+
+#Efectos **definidos en el crupier **se aplican en el orden que estan escritos en
+	el poder
+[]  empujarX
+[]  curarX
+[]  dañarX
+[]  aumentarXStatY
+[]  aumentarXStatYporZtiempo
+[]  areaEfectoX
+[]  areaEfectoXLimiteDeVecesY **dificil?
+[]  rebotarXvecesYdistancia
+[]  agregarIDpasiva (ej: inmunidad a algo, )
+[]  
+	
+#Stats 
+[]  distancia de vicion
+[]  coste
+[]  vida (define vida inicial)
+[]  turnos*casilla (cada cuantos turnos avanza una casilla)
+[]  exposicion (intensidad de atraer el focus)
+[]  enfriamiento (temporizador; cuanto demora la CARTA en volver a estar disponible)
+[]  detenimiento (temporizador; enfriamiento de avanzar, aumeta [turnos*casilla] cuando
+	avanza)
+[]  demora (enfriamiento a las demas cartas al invocarse)
+[]  tipos
+[]IdPoderes (ids de sus poderes)
+
+#FILTRO **Selector de fichas || Mostrador de fichas
+[ ]ordenar por stat 
+[ ]ordenar por alfabetico
+[ ]filtrar por string
+[ ]filtrar por poder
+[ ]filtrar por tipo
+
+#BUILDER
+[x]oscurecer y bloquear selecciones ocupadas
+[x]doble click para liberar seleccion
+[x]desocupar liberados
+[x]cambiar de posicion seleciones al clickear una detras de otra
+[x]impedir que se escoja mas de una vez el mismo
+[]tiene que quedar vacio al apretar listo, se supone que es un maso nuevo
+[]emitir el mazo al servidor
+	[]verificar valides

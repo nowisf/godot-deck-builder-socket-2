@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpdectxkix0pj"]
+
+[ext_resource type="Script" uid="uid://c0pj22d2jkebx" path="res://juego/casilla/casilla.gd" id="1_hr708"]
+[ext_resource type="Texture2D" uid="uid://bgfdv6yxjj1tp" path="res://imagenes/CasillaSueloDark.png" id="2_mfssr"]
+
+[node name="Casilla" type="Node2D"]
+script = ExtResource("1_hr708")
+
+[node name="Suelo" type="Sprite2D" parent="."]
+texture = ExtResource("2_mfssr")
+centered = false

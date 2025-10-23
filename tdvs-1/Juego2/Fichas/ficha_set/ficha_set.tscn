@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=3 uid="uid://b0qso71cjdfmu"]
+
+[ext_resource type="Texture2D" uid="uid://cwmcbticqgj6n" path="res://imagenes/Espacio vacio mazo tdvs.png" id="1_3rdq1"]
+[ext_resource type="Script" uid="uid://bcvabi5atecj8" path="res://Juego2/Fichas/ficha_set/ficha_set.gd" id="2_takd4"]
+[ext_resource type="StyleBox" uid="uid://cvjehboxjs3fp" path="res://Styles/ButtonHoverCreacionSets.tres" id="3_ghct0"]
+[ext_resource type="Texture2D" uid="uid://lcorwv774y3v" path="res://imagenes/Escencia.png" id="3_n07in"]
+[ext_resource type="StyleBox" uid="uid://b15genq3lrf5m" path="res://Styles/ButtonFocusCreacionSets.tres" id="4_t2dd0"]
+[ext_resource type="Shader" uid="uid://bxy806m5npbot" path="res://Juego2/Fichas/ficha_set/color_shader.gdshader" id="5_86ohq"]
+[ext_resource type="Texture2D" uid="uid://bk8ehmvvqiwts" path="res://imagenes/margen resaltante.png" id="6_t2dd0"]
+[ext_resource type="Texture2D" uid="uid://c2hy0gu4vjdrt" path="res://imagenes/Espacio borrar.png" id="7_gajx3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2y1jw"]
+shader = ExtResource("5_86ohq")
+shader_parameter/u_color = Vector4(1, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_vbo38"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gajx3"]
+
+[node name="FichaSet" type="TextureRect"]
+custom_minimum_size = Vector2(200, 50)
+texture = ExtResource("1_3rdq1")
+script = ExtResource("2_takd4")
+
+[node name="CosteTexture" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 153.0
+offset_top = 5.0
+offset_right = 193.0
+offset_bottom = 45.0
+texture = ExtResource("3_n07in")
+
+[node name="CosteLabel" type="Label" parent="CosteTexture"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "$"
+horizontal_alignment = 1
+
+[node name="MargenResaltante" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_t2dd0")
+draw_center = false
+region_rect = Rect2(0, -0.49016762, 200.13835, 200.49017)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="PrepEliminacionTexture" type="TextureRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_2y1jw")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_vbo38")
+texture = ExtResource("7_gajx3")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gajx3")
+theme_override_styles/hover = ExtResource("3_ghct0")
+theme_override_styles/focus = ExtResource("4_t2dd0")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

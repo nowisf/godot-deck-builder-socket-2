@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhvx5x8pypxqi"]
+
+[ext_resource type="Texture2D" uid="uid://b31itx3vjapvv" path="res://imagenes/contenedor de fichas.png" id="1_l71m3"]
+[ext_resource type="Script" uid="uid://dcgxtvo3frk88" path="res://creador_masos/ficha_seleccionable.gd" id="2_fqu7a"]
+[ext_resource type="StyleBox" uid="uid://cvjehboxjs3fp" path="res://Styles/ButtonHoverCreacionSets.tres" id="3_vilh4"]
+[ext_resource type="StyleBox" uid="uid://b15genq3lrf5m" path="res://Styles/ButtonFocusCreacionSets.tres" id="4_fnslm"]
+[ext_resource type="Texture2D" uid="uid://lcorwv774y3v" path="res://imagenes/Escencia.png" id="5_dj1ph"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pg74c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l71m3"]
+bg_color = Color(0.22982952, 0.22227865, 0.2097854, 0.5137255)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqu7a"]
+bg_color = Color(0.9205892, 0.12818962, 3.85046e-07, 0.28235295)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="CasillaFichaEscogible" type="TextureRect"]
+texture = ExtResource("1_l71m3")
+script = ExtResource("2_fqu7a")
+
+[node name="FichaTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CosteTexture" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 157.0
+offset_top = 4.0
+offset_right = 197.0
+offset_bottom = 44.0
+texture = ExtResource("5_dj1ph")
+
+[node name="CosteLabel" type="Label" parent="CosteTexture"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "$"
+horizontal_alignment = 1
+
+[node name="SeleccionarButton" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pg74c")
+theme_override_styles/hover = ExtResource("3_vilh4")
+theme_override_styles/focus = ExtResource("4_fnslm")
+
+[node name="BloqueoPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l71m3")
+
+[node name="FaltantePanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fqu7a")
+
+[connection signal="pressed" from="SeleccionarButton" to="." method="_on_seleccionar_button_pressed"]

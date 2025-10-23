@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FichaResource" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://imagenes/sapitoPomAmarillo.png" id="1_iqh86"]
+[ext_resource type="Texture2D" path="res://imagenes/SapitoAmarillo mazo.png" id="2_px8tq"]
+[ext_resource type="Script" path="res://Juego2/Fichas/Ejemplares/ficha_resource.gd" id="3_8y6g4"]
+
+[resource]
+script = ExtResource("3_8y6g4")
+imagenFicha = ExtResource("1_iqh86")
+imagenSet = ExtResource("2_px8tq")
+id = 1
+nombre = "Sapito Amarillo"
+coste = 10

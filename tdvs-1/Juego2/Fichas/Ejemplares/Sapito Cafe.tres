@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FichaResource" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://imagenes/sapitoPomCafe.png" id="1_clve0"]
+[ext_resource type="Texture2D" path="res://imagenes/SapitoCafe mazo.png" id="2_23fp8"]
+[ext_resource type="Script" path="res://Juego2/Fichas/Ejemplares/ficha_resource.gd" id="3_1vdb8"]
+
+[resource]
+script = ExtResource("3_1vdb8")
+imagenFicha = ExtResource("1_clve0")
+imagenSet = ExtResource("2_23fp8")
+id = 3
+nombre = "Sapito Cafe"
+coste = 1

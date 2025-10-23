@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="TDVS 1"
+run/main_scene="uid://bju2p4ayn6gr1"
+config/features=PackedStringArray("4.5", "Mobile")
+config/icon="res://imagenes/icon.svg"
+
+[autoload]
+
+ImagenesAutoload="*res://imagenes/imagenes_autoload.gd"
+ManagerDataPersistente="*res://data/data_persistente/manager_data_persistente.gd"
+GlobalData="*res://data/global_data/global_data.gd"
+Socket="*res://conexion/socket.gd"
+ManagerFichas="*res://Juego2/Fichas/Ejemplares/manager_fichas.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[rendering]
+
+renderer/rendering_method="mobile"

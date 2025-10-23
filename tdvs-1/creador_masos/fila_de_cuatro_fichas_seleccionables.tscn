@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl5j2ffsfffvl"]
+
+[ext_resource type="Script" uid="uid://cs1ccr85vw53u" path="res://creador_masos/fila_de_cuatro_fichas_seleccionables.gd" id="1_pg74c"]
+[ext_resource type="PackedScene" uid="uid://bhvx5x8pypxqi" path="res://creador_masos/casilla_ficha_escogible.tscn" id="2_s3nrn"]
+
+[node name="FilaDeCuatroFichasSeleccionables" type="HBoxContainer"]
+theme_override_constants/separation = 0
+script = ExtResource("1_pg74c")
+
+[node name="CasillaFichaEscogible" parent="." instance=ExtResource("2_s3nrn")]
+layout_mode = 2
+
+[node name="CasillaFichaEscogible2" parent="." instance=ExtResource("2_s3nrn")]
+layout_mode = 2
+
+[node name="CasillaFichaEscogible3" parent="." instance=ExtResource("2_s3nrn")]
+layout_mode = 2
+
+[node name="CasillaFichaEscogible4" parent="." instance=ExtResource("2_s3nrn")]
+layout_mode = 2

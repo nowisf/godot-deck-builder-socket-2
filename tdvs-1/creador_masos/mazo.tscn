@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bplltmcxhnq4v"]
+
+[ext_resource type="PackedScene" uid="uid://b0qso71cjdfmu" path="res://Juego2/Fichas/ficha_set/ficha_set.tscn" id="1_h815f"]
+[ext_resource type="Script" uid="uid://d2sonpquhqxbb" path="res://creador_masos/mazo.gd" id="1_n0o48"]
+
+[node name="set" type="VBoxContainer"]
+offset_left = 27.0
+offset_top = 58.0
+offset_right = 227.0
+offset_bottom = 576.0
+theme_override_constants/separation = 2
+script = ExtResource("1_n0o48")
+ficha_set_scene = ExtResource("1_h815f")

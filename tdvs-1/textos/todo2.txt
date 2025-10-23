@@ -1,0 +1,22 @@
+[x]mover una ficha de slot libera la ficha
+[x]al abrir builder no se ven fichas 
+[x]Listo no se activa
+
+[x]servidor procsa mazo
+[x]enviar mazos a cliente
+[x]selector demazos
+
+
+[]vaciar builder en listo o cancelar y desconexion
+[x]editar mazo
+	-[]Backs
+[]doble click en creador de mazos agrega la ficha al primer puesto disponible
+[]Sapito id 0 no aparece en los mazos recividos pero si en la bd de los sets
+[]borrar mazo
+
+
+
+[]investigar audio
+qwuizases:
+	permitir mazos vacios, asi seve mejor el deslisamiento
+	nivel de cuenta , on lvl up  dar ficha

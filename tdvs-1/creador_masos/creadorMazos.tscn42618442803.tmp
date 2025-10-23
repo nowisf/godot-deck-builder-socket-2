@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0ehxsilmfuld"]
+
+[ext_resource type="Script" uid="uid://buxpkwaamke6h" path="res://creador_masos/creador_mazos.gd" id="1_i2b7i"]
+[ext_resource type="PackedScene" uid="uid://jb56um3hyo22" path="res://creador_masos/selector_fichas.tscn" id="2_7phoa"]
+[ext_resource type="PackedScene" uid="uid://bplltmcxhnq4v" path="res://creador_masos/mazo.tscn" id="3_7phoa"]
+
+[node name="CreadorMazos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i2b7i")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectorFichas" parent="." instance=ExtResource("2_7phoa")]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 41.0
+offset_right = 1148.0
+offset_bottom = 642.0
+
+[node name="ListoButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 591.0
+offset_right = 217.0
+offset_bottom = 642.0
+text = "Listo"
+
+[node name="NombreMazoLineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 14.0
+offset_right = 246.0
+offset_bottom = 48.0
+text = "Nombre Mazo"
+
+[node name="ObtenidoLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 8.0
+offset_right = 1105.0
+offset_bottom = 31.0
+text = "No obtenido"
+
+[node name="ObtenidoCheckBox" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 1106.0
+offset_top = 9.0
+offset_right = 1130.0
+offset_bottom = 33.0
+focus_mode = 0
+
+[node name="Mazo" parent="." instance=ExtResource("3_7phoa")]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 60.0
+offset_right = 228.0
+offset_bottom = 578.0
+
+[connection signal="casilla_ficha_escogible_clickeado" from="SelectorFichas" to="." method="_on_selector_fichas_casilla_ficha_escogible_clickeado"]
+[connection signal="pressed" from="ListoButton" to="." method="_on_listo_button_pressed"]
+[connection signal="ficha_set_clicked" from="Mazo" to="." method="_on_mazo_ficha_set_clicked"]

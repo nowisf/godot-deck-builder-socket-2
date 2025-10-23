@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DataPersistente" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/data_persistente/data_persistente.gd" id="1_urual"]
+
+[resource]
+script = ExtResource("1_urual")
+version = "1.0.0"
+metadata/_custom_type_script = "uid://dmaxdth0pr2qn"

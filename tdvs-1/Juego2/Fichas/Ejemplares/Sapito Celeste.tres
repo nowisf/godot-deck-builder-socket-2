@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FichaResource" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://imagenes/sapitoPomCeleste.png" id="1_gqmmn"]
+[ext_resource type="Texture2D" path="res://imagenes/SapitoCeleste mazo.png" id="2_kqtea"]
+[ext_resource type="Script" path="res://Juego2/Fichas/Ejemplares/ficha_resource.gd" id="3_ecrkv"]
+
+[resource]
+script = ExtResource("3_ecrkv")
+imagenFicha = ExtResource("1_gqmmn")
+imagenSet = ExtResource("2_kqtea")
+id = 4
+nombre = "Sapito Celeste"
+coste = 6

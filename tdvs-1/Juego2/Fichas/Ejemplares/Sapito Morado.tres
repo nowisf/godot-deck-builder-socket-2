@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FichaResource" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://imagenes/sapitoPomMorado.png" id="1_t17uh"]
+[ext_resource type="Texture2D" path="res://imagenes/SapitoMorado mazo.png" id="2_jrdcn"]
+[ext_resource type="Script" path="res://Juego2/Fichas/Ejemplares/ficha_resource.gd" id="3_c6fve"]
+
+[resource]
+script = ExtResource("3_c6fve")
+imagenFicha = ExtResource("1_t17uh")
+imagenSet = ExtResource("2_jrdcn")
+id = 6
+nombre = "Sapito Morado"
+coste = 4

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FichaResource" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://imagenes/sapitoPomNegro.png" id="1_jxvkg"]
+[ext_resource type="Texture2D" path="res://imagenes/SapitoNegro mazo.png" id="2_4wiyg"]
+[ext_resource type="Script" path="res://Juego2/Fichas/Ejemplares/ficha_resource.gd" id="3_ow0ok"]
+
+[resource]
+script = ExtResource("3_ow0ok")
+imagenFicha = ExtResource("1_jxvkg")
+imagenSet = ExtResource("2_4wiyg")
+id = 8
+nombre = "Sapito Negro"
+coste = 300

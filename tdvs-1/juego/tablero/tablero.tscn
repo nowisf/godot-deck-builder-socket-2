@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0fvbvttcke03"]
+
+[ext_resource type="Script" uid="uid://cqlrf6vms4bhu" path="res://juego/tablero/tablero.gd" id="1_adh7g"]
+[ext_resource type="PackedScene" uid="uid://dpdectxkix0pj" path="res://juego/casilla/casilla.tscn" id="2_laj61"]
+[ext_resource type="PackedScene" uid="uid://c8h4xkq3gyki0" path="res://juego/ficha/ficha.tscn" id="3_240ik"]
+
+[node name="Tablero" type="Node2D"]
+script = ExtResource("1_adh7g")
+casilla_scene = ExtResource("2_laj61")
+"tamaño_tablero" = Vector2i(40, 40)
+ficha = ExtResource("3_240ik")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="trole"]

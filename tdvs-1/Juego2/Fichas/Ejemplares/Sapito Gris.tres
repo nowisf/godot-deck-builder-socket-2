@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FichaResource" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://imagenes/sapitoPomGris.png" id="1_xrrhi"]
+[ext_resource type="Texture2D" path="res://imagenes/SapitoGris mazo.png" id="2_tnrhi"]
+[ext_resource type="Script" path="res://Juego2/Fichas/Ejemplares/ficha_resource.gd" id="3_imc7h"]
+
+[resource]
+script = ExtResource("3_imc7h")
+imagenFicha = ExtResource("1_xrrhi")
+imagenSet = ExtResource("2_tnrhi")
+id = 5
+nombre = "Sapito Gris"
+coste = 2

@@ -1,0 +1,80 @@
+{
+  "0": {
+    "nombre": "Sapito",
+    "imagenFicha": "sapitoPom.png",
+    "imagenSet": "sapito mazo.png",
+    "coste": 2
+  },
+  "1": {
+    "nombre": "Sapito Amarillo",
+    "imagenFicha": "sapitoPomAmarillo.png",
+    "imagenSet": "SapitoAmarillo mazo.png",
+    "coste": 10
+  },
+  "2": {
+    "nombre": "Sapito Blanco",
+    "imagenFicha": "sapitoPomBlanco.png",
+    "imagenSet": "SapitoBlanco mazo.png",
+    "coste": 20
+  },
+  "3": {
+    "nombre": "Sapito Cafe",
+    "imagenFicha": "sapitoPomCafe.png",
+    "imagenSet": "SapitoCafe mazo.png",
+    "coste": 1
+  },
+  "4": {
+    "nombre": "Sapito Celeste",
+    "imagenFicha": "sapitoPomCeleste.png",
+    "imagenSet": "SapitoCeleste mazo.png",
+    "coste": 6
+  },
+  "5": {
+    "nombre": "Sapito Gris",
+    "imagenFicha": "sapitoPomGris.png",
+    "imagenSet": "SapitoGris mazo.png",
+    "coste": 2
+  },
+  "6": {
+    "nombre": "Sapito Morado",
+    "imagenFicha": "sapitoPomMorado.png",
+    "imagenSet": "SapitoMorado mazo.png",
+    "coste": 4
+  },
+  "7": {
+    "nombre": "Sapito Naranja",
+    "imagenFicha": "sapitoPomNaranja.png",
+    "imagenSet": "SapitoNaranja mazo.png",
+    "coste": 7
+  },
+  "8": {
+    "nombre": "Sapito Negro",
+    "imagenFicha": "sapitoPomNegro.png",
+    "imagenSet": "SapitoNegro mazo.png",
+    "coste": 300
+  },
+  "9": {
+    "nombre": "Sapito Petroleo",
+    "imagenFicha": "sapitoPomPetroleo.png",
+    "imagenSet": "SapitoPetroleo mazo.png",
+    "coste": 1
+  },
+  "10": {
+    "nombre": "Sapito Piel",
+    "imagenFicha": "sapitoPomPiel.png",
+    "imagenSet": "SapitoPiel mazo.png",
+    "coste": 1
+  },
+  "11": {
+    "nombre": "Sapito Rojo",
+    "imagenFicha": "sapitoPomRojo.png",
+    "imagenSet": "SapitoRojo mazo.png",
+    "coste": 5
+  },
+  "12": {
+    "nombre": "Sapito Rosado",
+    "imagenFicha": "sapitoPomRosado.png",
+    "imagenSet": "SapitoRosado mazo.png",
+    "coste": 3
+  }
+}

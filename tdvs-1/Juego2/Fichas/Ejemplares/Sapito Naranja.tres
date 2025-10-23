@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FichaResource" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://imagenes/sapitoPomNaranja.png" id="1_1mi01"]
+[ext_resource type="Texture2D" path="res://imagenes/SapitoNaranja mazo.png" id="2_axpay"]
+[ext_resource type="Script" path="res://Juego2/Fichas/Ejemplares/ficha_resource.gd" id="3_gdggy"]
+
+[resource]
+script = ExtResource("3_gdggy")
+imagenFicha = ExtResource("1_1mi01")
+imagenSet = ExtResource("2_axpay")
+id = 7
+nombre = "Sapito Naranja"
+coste = 7
