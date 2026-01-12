@@ -1,0 +1,45 @@
+# --- Generales ---
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# --- Servidor (Node.js / TypeScript) ---
+# Dependencias
+servidor/node_modules/
+servidor.zip
+
+# Compilación (JS generado)
+servidor/dist/
+servidor/build/
+
+# Variables de entorno (Seguridad)
+servidor/.env
+servidor/.env.local
+
+# Logs de npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Cliente (Godot) ---
+# Archivos de importación de Godot (se regeneran automáticamente)
+tdvs-1/.godot/
+tdvs-1/.import/
+
+# Exportaciones del juego
+tdvs-1/export/
+tdvs-1/build/
+*.exe
+*.pck
+*.apk
+*.ipa
+
+# Configuraciones de exportación (pueden contener contraseñas de firmas)
+tdvs-1/export_presets.cfg
+
+# --- Archivos de Respaldo y Basura ---
+*.bak
+*.drawio.bkp
+*copy.ts
+*copy.gd
