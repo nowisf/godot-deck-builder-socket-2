@@ -5,6 +5,7 @@ import {
   getMazoPorNombreYUsuario,
 } from "@db/mazo.repository";
 import { crearMazoNuevoDTO } from "@dto/mazo.dto";
+import { ExtendedWebSocket } from "@sockets/usuariosLogueados";
 
 export async function nuevo_mazo(socket, crearMazoNuevoDTO: crearMazoNuevoDTO) {
   let mensaje = {
@@ -112,4 +113,18 @@ export async function crearSet(
   }
 
   return nuevoSet;
+}
+
+export async function cambiarSetCombate(
+  socket: ExtendedWebSocket,
+  nombre_set: string
+) {
+  const mazo = socket.usuario.getMazoPorNombre(nombre_set);
+  if (!socket.usuario || !mazo) {
+    console.log("no existe el mazo o el usuario");
+    return { ok: false };
+  }
+  console.log("hola");
+  socket.usuario.seleccionarMazo(socket.usuario.getMazoPorNombre(nombre_set));
+  return { ok: true, nombre_set: nombre_set };
 }

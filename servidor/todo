@@ -1,1 +1,19 @@
 logout: dejar de buscar partida
+[]cds
+movimiento
+fichas mano
+[]emitir los mensajes
+[acciones] //accion, data~props
+[]mostrar los mensajes
+
+se ejecutan los eventos
+
+Bomba de humo: Cegar jugador de ver casilla
+
+preguntar lo de la estrategia para armar handlers
+
+tablero clase
+
+Personajes:
+Magos: no se acercan mucho, tienen alta exposicion
+Caza Magos: se acercan pero evitan quedar meelee, tienen alto rango

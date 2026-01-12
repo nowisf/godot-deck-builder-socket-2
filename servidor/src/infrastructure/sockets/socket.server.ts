@@ -3,12 +3,14 @@ import { usuarioHandlers } from "./handlers/usuario.handlers";
 import { syncHandlers } from "./handlers/sync.handlers";
 import { mazoHandlers } from "./handlers/mazo.handlers";
 import { matchMakingHandlers } from "./handlers/matchMaking.handlers";
+import { partidaHandlers } from "./handlers/partida.handlers copy";
 
 const handlers = {
   ...usuarioHandlers,
   ...syncHandlers,
   ...mazoHandlers,
   ...matchMakingHandlers,
+  ...partidaHandlers,
 };
 
 export default function setupWebSocketServer(port: number) {

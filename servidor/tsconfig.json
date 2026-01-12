@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "target": "ES2015",
+    "lib": ["ES2015", "DOM"],
+    "downlevelIteration": true,
     "baseUrl": ".", // raíz del proyecto
     "paths": {
       "@db/*": ["./src/infrastructure/database/*"],

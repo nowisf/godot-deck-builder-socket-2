@@ -7,7 +7,8 @@ async function handleRegistrarUsuario(socket, data) {
 
     socket.send(JSON.stringify({ type: "register_respuesta", ...respuesta }));
   } catch (err) {
-    socket.send(JSON.stringify({ type: "error", mensaje: err.message }));
+    console.log("Error en handleRegistrarUsuario:", err);
+    socket.send(JSON.stringify({ type: "error" }));
   }
 }
 
@@ -18,7 +19,7 @@ async function handleLogin(socket, data) {
     socket.send(JSON.stringify({ type: "login_respuesta", ...respuesta }));
   } catch (err) {
     console.log("Error en handleLogin:", err);
-    socket.send(JSON.stringify({ type: "error", mensaje: err.message }));
+    socket.send(JSON.stringify({ type: "error" }));
   }
 }
 
@@ -29,7 +30,7 @@ async function handleLogOut(socket, data) {
     socket.send(JSON.stringify({ type: "logout_respuesta", ok: true }));
   } catch (err) {
     console.log("Error en handleLogout:", err);
-    socket.send(JSON.stringify({ type: "error", mensaje: err.message }));
+    socket.send(JSON.stringify({ type: "error" }));
   }
 }
 

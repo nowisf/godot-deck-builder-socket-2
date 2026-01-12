@@ -1,3 +1,5 @@
+import { Partida } from "@domain/partida/partida";
+import { Jugador } from "@domain/usuario/jugador";
 import { ExtendedWebSocket } from "@sockets/usuariosLogueados";
 
 class MatchMaker {
@@ -30,6 +32,19 @@ class MatchMaker {
     console.log(
       `✅ Partida creada entre ${jugadores[0].usuario.nombre} y ${jugadores[1].usuario.nombre}`
     );
+
+    const partida = new Partida();
+    partida.agregarJugador(
+      new Jugador(partida, jugadores[0].usuario.nombre, jugadores[0], "A")
+    );
+    partida.agregarJugador(
+      new Jugador(partida, jugadores[1].usuario.nombre, jugadores[1], "B")
+    );
+
+    jugadores.forEach((j) => {
+      j.send(JSON.stringify({ type: "partida_encontrada" }));
+    });
+    partida.iniciarPartida();
   }
 
   quitarJugador(jugador: ExtendedWebSocket) {

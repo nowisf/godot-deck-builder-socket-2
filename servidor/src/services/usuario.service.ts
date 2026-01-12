@@ -19,7 +19,8 @@ import {
 import { darFichasBienvenida } from "./fichas.service";
 import { getUsuarioFichas } from "@db/ficha.repository";
 import { fichasManager } from "src/data/fichas";
-import { getUserMazos } from "@db/mazo.repository";
+import { getUserMazos, getUserMazosDominio } from "@db/mazo.repository";
+import { mazoMapper } from "src/mappers/mazo.mapper";
 
 export async function registrarUsuario(
   dto: CrearUsuarioDTO
@@ -72,7 +73,8 @@ export async function login(socket, dto: LoginDTO) {
     user.id,
     user.nombre,
     user.email,
-    user.creado_en
+    user.creado_en,
+    socket
   );
 
   var fichasPoseidas = await getUsuarioFichas(user.id);
@@ -82,15 +84,18 @@ export async function login(socket, dto: LoginDTO) {
 
   agregarUsuarioConectado(socket.usuario.nombre, socket);
 
+  const mazos = await getUserMazosDominio(user.id);
+  socket.usuario.mazos = mazos;
   socket.send(
     JSON.stringify({
       type: "sets_coleccion",
-      mazos: await getUserMazos(user.id),
+      mazos: mazos.map(mazoMapper.toClient),
     })
   );
+
   socket.send(
     JSON.stringify({ type: "fichas_poseidas", fichas: fichasPoseidas })
   );
-  console.log("Usuario logueado:", socket.usuario);
+  console.log("Usuario logueado:", socket.usuario.nombre);
   return { ok: true };
 }

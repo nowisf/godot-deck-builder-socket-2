@@ -7,7 +7,8 @@ async function handleBuscarPartida(socket, data) {
       JSON.stringify({ type: "buscar_partida_respuesta", ...respuesta })
     );
   } catch (err) {
-    socket.send(JSON.stringify({ type: "error", mensaje: err.message }));
+    socket.send(JSON.stringify({ type: "error" }));
+    console.log("Error en handleBuscarPartida:", err);
   }
 }
 
@@ -21,7 +22,8 @@ async function handleCancelarBuscarPartida(socket, data) {
       })
     );
   } catch (err) {
-    socket.send(JSON.stringify({ type: "error", mensaje: err.message }));
+    socket.send(JSON.stringify({ type: "error" }));
+    console.log("Error en handleCancelarBuscarPartida:", err);
   }
 }
 

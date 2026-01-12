@@ -4,6 +4,17 @@ export interface DBMazo {
   nombre: string;
   creado_en: Date;
 }
+
+export interface DBMazoConFichas {
+  id: number;
+  nombre: string;
+  creado_en: Date;
+  fichas: {
+    ficha_id: number;
+    posicion: number;
+  }[];
+}
+
 export interface crearMazoNuevoDTO {
   nombre_mazo: string;
   set: [

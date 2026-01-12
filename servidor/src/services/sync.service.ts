@@ -7,7 +7,9 @@ export function syncVersions(syncVersionDTO: syncVersionDTO) {
   var ok = version == syncVersionDTO.version;
   var fichas;
   if (!ok) {
-    fichas = fichasManager.getTodasJson();
+    fichas = fichasManager.getTodasCliente();
+    console.log("WAW");
+    console.log(JSON.stringify(fichas, null, 2));
   }
   return { ok, fichas, version };
 }

@@ -5,7 +5,8 @@ async function handleVersion(socket, data) {
     const respuesta = await syncVersions(data);
     socket.send(JSON.stringify({ type: "version_respuesta", ...respuesta }));
   } catch (err) {
-    socket.send(JSON.stringify({ type: "error", mensaje: err.message }));
+    socket.send(JSON.stringify({ type: "error" }));
+    console.log("Error en handleVersion:", err);
   }
 }
 

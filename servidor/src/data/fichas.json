@@ -3,78 +3,258 @@
     "nombre": "Sapito",
     "imagenFicha": "sapitoPom.png",
     "imagenSet": "sapito mazo.png",
-    "coste": 2
+    "stats": {
+      "coste": 1,
+      "tiempoReutilizacion": 1,
+      "enfriamientoInicial": 1,
+      "distanciaVision": 2,
+      "vidaMax": 20
+    },
+    "habilidades": [
+      {
+        "nombre": "Saltito",
+        "demoraReutilizacion": 1,
+        "condiciones": [
+          { "tipo": "ENFRIAMIENTO_0" },
+          { "tipo": "SIN_ENEMIGOS_X_RANGO", "rango": 1 }
+        ],
+        "efectos": [
+          {
+            "tipo": "AVANZAR_FICHA"
+          }
+        ]
+      },
+      {
+        "nombre": "Embestida Sapito",
+        "demoraReutilizacion": 2,
+        "condiciones": [
+          { "tipo": "ENFRIAMIENTO_0" },
+          { "tipo": "ENEMIGOS_A_X_RANGO", "rango": 1 }
+        ],
+        "efectos": [
+          {
+            "tipo": "ALTERAR_FICHAS",
+            "rangoSeleccionObjetivos": 1,
+            "formaSeleccionObjetivos": "DIAMANTE",
+            "filtrosObjetivos": ["ENEMIGOS"],
+            "cantidadObjetivos": 1,
+            "objetivosReelegibles": false,
+            "tipoAnimacion": "CHOQUE_MELEE",
+            "alteraciones": [
+              { "tipo": "DAÑO", "valorMinimo": 5, "valorMaximo": 8 }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "1": {
     "nombre": "Sapito Amarillo",
     "imagenFicha": "sapitoPomAmarillo.png",
     "imagenSet": "SapitoAmarillo mazo.png",
-    "coste": 10
+    "stats": {
+      "coste": 2,
+      "tiempoReutilizacion": 2,
+      "enfriamientoInicial": 2,
+      "distanciaVision": 3,
+      "vidaMax": 10
+    },
+    "habilidades": [
+      {
+        "nombre": "Saltito",
+        "demoraReutilizacion": 1,
+        "condiciones": [
+          { "tipo": "ENFRIAMIENTO_0" },
+          { "tipo": "SIN_ENEMIGOS_X_RANGO", "rango": 3 }
+        ],
+        "efectos": [
+          {
+            "tipo": "AVANZAR_FICHA"
+          }
+        ]
+      },
+      {
+        "nombre": "Embestida Sapito",
+        "demoraReutilizacion": 2,
+        "condiciones": [
+          { "tipo": "ENFRIAMIENTO_0" },
+          { "tipo": "ENEMIGOS_A_X_RANGO", "rango": 3 }
+        ],
+        "efectos": [
+          {
+            "tipo": "ALTERAR_FICHAS",
+            "rangoSeleccionObjetivos": 3,
+            "formaSeleccionObjetivos": "DIAMANTE",
+            "filtrosObjetivos": ["ENEMIGOS"],
+            "cantidadObjetivos": 6,
+            "objetivosReelegibles": true,
+            "tipoAnimacion": "CHOQUE_MELEE",
+            "alteraciones": [
+              { "tipo": "DAÑO", "valorMinimo": 3, "valorMaximo": 5 }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "2": {
     "nombre": "Sapito Blanco",
     "imagenFicha": "sapitoPomBlanco.png",
     "imagenSet": "SapitoBlanco mazo.png",
-    "coste": 20
+    "stats": {
+      "coste": 5,
+      "tiempoReutilizacion": 3,
+      "enfriamientoInicial": 4,
+      "distanciaVision": 0,
+      "vidaMax": 200,
+      "exposicion": 20
+    },
+    "habilidades": [
+      {
+        "nombre": "Saltito",
+        "demoraReutilizacion": 3,
+        "condiciones": [
+          { "tipo": "ENFRIAMIENTO_0" },
+          { "tipo": "SIN_ENEMIGOS_X_RANGO", "rango": 0 }
+        ],
+        "efectos": [
+          {
+            "tipo": "AVANZAR_FICHA"
+          }
+        ]
+      },
+      {
+        "nombre": "Embestida Sapito",
+        "demoraReutilizacion": 3,
+        "condiciones": [
+          { "tipo": "ENFRIAMIENTO_0" },
+          { "tipo": "ENEMIGOS_A_X_RANGO", "rango": 0 }
+        ],
+        "efectos": [
+          {
+            "tipo": "ALTERAR_FICHAS",
+            "rangoSeleccionObjetivos": 0,
+            "formaSeleccionObjetivos": "DIAMANTE",
+            "filtrosObjetivos": ["ENEMIGOS"],
+            "cantidadObjetivos": 1,
+            "objetivosReelegibles": false,
+            "tipoAnimacion": "CHOQUE_MELEE",
+            "alteraciones": [
+              { "tipo": "DAÑO", "valorMinimo": 8, "valorMaximo": 14 }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "3": {
     "nombre": "Sapito Cafe",
     "imagenFicha": "sapitoPomCafe.png",
     "imagenSet": "SapitoCafe mazo.png",
-    "coste": 1
+    "stats": {
+      "coste": 15,
+      "tiempoReutilizacion": 10,
+      "enfriamientoInicial": 5,
+      "distanciaVision": 1
+    }
   },
   "4": {
     "nombre": "Sapito Celeste",
     "imagenFicha": "sapitoPomCeleste.png",
     "imagenSet": "SapitoCeleste mazo.png",
-    "coste": 6
+    "stats": {
+      "coste": 8,
+      "tiempoReutilizacion": 9,
+      "enfriamientoInicial": 4,
+      "distanciaVision": 3
+    }
   },
   "5": {
     "nombre": "Sapito Gris",
     "imagenFicha": "sapitoPomGris.png",
     "imagenSet": "SapitoGris mazo.png",
-    "coste": 2
+    "stats": {
+      "coste": 12,
+      "tiempoReutilizacion": 14,
+      "enfriamientoInicial": 7,
+      "distanciaVision": 4
+    }
   },
   "6": {
     "nombre": "Sapito Morado",
     "imagenFicha": "sapitoPomMorado.png",
     "imagenSet": "SapitoMorado mazo.png",
-    "coste": 4
+    "stats": {
+      "coste": 18,
+      "tiempoReutilizacion": 18,
+      "enfriamientoInicial": 9,
+      "distanciaVision": 5
+    }
   },
   "7": {
     "nombre": "Sapito Naranja",
     "imagenFicha": "sapitoPomNaranja.png",
     "imagenSet": "SapitoNaranja mazo.png",
-    "coste": 7
+    "stats": {
+      "coste": 25,
+      "tiempoReutilizacion": 22,
+      "enfriamientoInicial": 11,
+      "distanciaVision": 6
+    }
   },
   "8": {
     "nombre": "Sapito Negro",
     "imagenFicha": "sapitoPomNegro.png",
     "imagenSet": "SapitoNegro mazo.png",
-    "coste": 300
+    "stats": {
+      "coste": 30,
+      "tiempoReutilizacion": 25,
+      "enfriamientoInicial": 12,
+      "distanciaVision": 6
+    }
   },
   "9": {
     "nombre": "Sapito Petroleo",
     "imagenFicha": "sapitoPomPetroleo.png",
     "imagenSet": "SapitoPetroleo mazo.png",
-    "coste": 1
+    "stats": {
+      "coste": 22,
+      "tiempoReutilizacion": 16,
+      "enfriamientoInicial": 8,
+      "distanciaVision": 5
+    }
   },
   "10": {
     "nombre": "Sapito Piel",
     "imagenFicha": "sapitoPomPiel.png",
     "imagenSet": "SapitoPiel mazo.png",
-    "coste": 1
+    "stats": {
+      "coste": 28,
+      "tiempoReutilizacion": 24,
+      "enfriamientoInicial": 11,
+      "distanciaVision": 6
+    }
   },
   "11": {
     "nombre": "Sapito Rojo",
     "imagenFicha": "sapitoPomRojo.png",
     "imagenSet": "SapitoRojo mazo.png",
-    "coste": 5
+    "stats": {
+      "coste": 10,
+      "tiempoReutilizacion": 10,
+      "enfriamientoInicial": 1,
+      "distanciaVision": 3
+    }
   },
   "12": {
     "nombre": "Sapito Rosado",
     "imagenFicha": "sapitoPomRosado.png",
     "imagenSet": "SapitoRosado mazo.png",
-    "coste": 3
+    "stats": {
+      "coste": 1,
+      "tiempoReutilizacion": 1,
+      "enfriamientoInicial": 1,
+      "distanciaVision": 1
+    }
   }
 }

@@ -1,5 +1,13 @@
-import { DBMazo } from "@dto/mazo.dto";
+import { DBMazo, DBMazoConFichas } from "@dto/mazo.dto";
 import pool from "./pool";
+
+import { Mazo } from "@domain/mazo/mazo";
+import { mazoMapper } from "src/mappers/mazo.mapper";
+
+export async function getUserMazosDominio(usuarioId: number): Promise<Mazo[]> {
+  const rawMazos = await getUserMazos(usuarioId);
+  return rawMazos.map(mazoMapper.fromDB);
+}
 
 export async function crearMazo(
   usuarioId: number,
@@ -21,12 +29,15 @@ export async function crearMazo(
   }
 }
 
-export async function getUserMazos(usuario_id): Promise<DBMazo[]> {
+export async function getUserMazos(
+  usuario_id: number
+): Promise<DBMazoConFichas[]> {
   const result = await pool.query(
     `
     SELECT 
       m.id AS mazo_id,
       m.nombre AS mazo_nombre,
+      m.creado_en AS mazo_creado_en,
       mf.ficha_id,
       mf.posicion
     FROM mazos m
@@ -37,7 +48,8 @@ export async function getUserMazos(usuario_id): Promise<DBMazo[]> {
     [usuario_id]
   );
 
-  const mazos = {};
+  const mazos: Record<number, DBMazoConFichas> = {};
+
   for (const row of result.rows) {
     if (!mazos[row.mazo_id]) {
       mazos[row.mazo_id] = {
@@ -47,7 +59,8 @@ export async function getUserMazos(usuario_id): Promise<DBMazo[]> {
         fichas: [],
       };
     }
-    if (row.ficha_id) {
+
+    if (row.ficha_id !== null) {
       mazos[row.mazo_id].fichas.push({
         ficha_id: row.ficha_id,
         posicion: row.posicion,
