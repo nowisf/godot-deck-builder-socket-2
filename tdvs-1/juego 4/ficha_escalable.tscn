@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://brwg8tjjc6yev"]
+
+[ext_resource type="Script" uid="uid://bqvswjjq2u88w" path="res://juego 4/ficha_escalable.gd" id="1_m3nva"]
+[ext_resource type="Texture2D" uid="uid://cl80ipvfuelw3" path="res://imagenes/bases fichasJuegoVista/BaseCasillaFichaAliadaMini.png" id="2_loumr"]
+[ext_resource type="Texture2D" uid="uid://bhyq3dtk7ayu0" path="res://imagenes/fichasJuegoVista/SapitoThugLife FJ.png" id="3_gocgd"]
+[ext_resource type="PackedScene" uid="uid://ifa0y0o81ajr" path="res://juego 4/vida_progress_bar/vida_progress_bar.tscn" id="4_gocgd"]
+
+[node name="FichaEscalable" type="Node2D"]
+z_index = 1
+texture_filter = 1
+script = ExtResource("1_m3nva")
+
+[node name="base" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_loumr")
+centered = false
+
+[node name="ficha" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_gocgd")
+centered = false
+
+[node name="Vida ProgressBar" parent="ficha" instance=ExtResource("4_gocgd")]

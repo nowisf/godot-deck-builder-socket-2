@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://crmv4rejrf6ds"]
+
+[ext_resource type="Script" uid="uid://mq2ygdyjft8p" path="res://juego 4/juego.gd" id="1_bcclo"]
+[ext_resource type="PackedScene" uid="uid://dh05rfh384240" path="res://juego 4/tablero.tscn" id="1_o1wix"]
+[ext_resource type="PackedScene" uid="uid://b31680j7fs25x" path="res://juego 4/interfaz_juego.tscn" id="2_lwkxf"]
+[ext_resource type="PackedScene" uid="uid://c3o1x3225b6dk" path="res://juego 4/zoom_layer/zoom_layer.tscn" id="3_w8t1q"]
+
+[node name="Juego" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_bcclo")
+
+[node name="Tablero" parent="." instance=ExtResource("1_o1wix")]
+position = Vector2(168, 12)
+mapa_dimensiones = Vector2(11, 7)
+
+[node name="Zoom CanvasLayer" parent="." instance=ExtResource("3_w8t1q")]
+
+[node name="Interfaz Juego" parent="." instance=ExtResource("2_lwkxf")]
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

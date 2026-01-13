@@ -5,7 +5,7 @@ signal button_editar_pressed()
 @onready var label_nombre_usuario = %NombreUsuarioLabel
 @onready var seleccionar_panel_desplazable = $SeleccionarSetPanelDesplazable
 @onready var esperando_partida_panel_desplazable = $EsperandoPartidaPanelDesplazable
-
+@onready var set_mostrador: MostradorSet = $Panel2/set
 
 
 func _ready() -> void:
@@ -19,13 +19,24 @@ func _on_cancelar_busqueda_partida_button_pressed() -> void:
 	var socket_mensaje = {"type": "cancelar_buscar_partida"}
 	Socket.enviar_mensaje(socket_mensaje)
 
+func resetear():
+	seleccionar_panel_desplazable.retirar()
+	esperando_partida_panel_desplazable.retirar()
+
 func manejarMensajeSocket(mensaje):
-	if mensaje.type == "buscar_partida_respuesta":
+	if mensaje.type == "buscar_partida_respuesta":	
 		if mensaje.ok:
 			esperando_partida_panel_desplazable.mostrar()
 	if mensaje.type == "cancelar_buscar_partida_respuesta":
 		if mensaje.ok:
 			esperando_partida_panel_desplazable.ocultar()
+	if mensaje.type == "partida_encontrada":
+		esperando_partida_panel_desplazable.retirar()
+	if mensaje.type == "cambiar_set_combate_respuesta":
+		if mensaje.ok:
+			GlobalData.set_set_para_combatir(GlobalData.get_set_por_nombre(mensaje.nombre_set))
+			seleccionar_panel_desplazable.retirar()
+		
 
 func establecer_label_usuario(nombre):
 	label_nombre_usuario.text = nombre

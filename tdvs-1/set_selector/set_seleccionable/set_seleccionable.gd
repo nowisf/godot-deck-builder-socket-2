@@ -23,4 +23,5 @@ func set_set_resource(nuevo_set_resource:SetResource):
 		
 
 func _on_set_seleccionable_boton_pressed() -> void:
-	GlobalData.set_set_para_combatir(set_resource)
+	Socket.enviar_mensaje({"type":"cambiar_set_combate", "set_nombre":set_resource.nombre})
+	#GlobalData.set_set_para_combatir(set_resource)

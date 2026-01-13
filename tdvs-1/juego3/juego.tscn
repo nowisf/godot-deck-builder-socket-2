@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://crh3khdsbyhcs"]
+
+[ext_resource type="Script" uid="uid://dyax6hmop2sx2" path="res://juego3/juego.gd" id="1_3vuf5"]
+[ext_resource type="Script" uid="uid://8alm4p02otne" path="res://mostrador_set/mostrador_set.gd" id="1_g5u01"]
+[ext_resource type="PackedScene" uid="uid://b6mjda2nau3xk" path="res://mostrador_set/ficha_set_mostrador/ficha_set_mostrador.tscn" id="2_7u3ge"]
+
+[node name="Juego" type="Node2D"]
+script = ExtResource("1_3vuf5")
+TAM_CASILLA = 40
+MAPA_TAM = Vector2(10, 10)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ShowMazoOponnteButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -51.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="MostradorSet" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_g5u01")
+ficha_set_mostrador_scene = ExtResource("2_7u3ge")
+metadata/_custom_type_script = "uid://8alm4p02otne"

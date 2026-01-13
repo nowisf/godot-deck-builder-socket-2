@@ -25,17 +25,15 @@ func _on_socket_mensaje_recibido(mensaje):
 		
 	if(mensaje.type == "version_respuesta"):
 		if !mensaje.ok:
-			ManagerDataPersistente.set_version(mensaje.version)
+			print("Actualizando Version!")
 			ManagerFichas.actualizar_fichas(mensaje.fichas)
+			ManagerDataPersistente.set_version(mensaje.version)
 		#dar fichas a global
 		GlobalData.establecer_fichas(ManagerFichas.cargar_todos())
 		
 	if(mensaje.type == "sets_coleccion"):
-		print("A")
 		GlobalData.vaciar_sets()
 		for sett in mensaje.mazos:
-			print(sett.nombre)
-			print(sett.fichas)
 			var set_resource:SetResource = SetResource.new()
 			set_resource.nombre = sett.nombre
 			for ficha in sett.fichas:

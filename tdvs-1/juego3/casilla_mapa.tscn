@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8idsp2ern3aj"]
+
+[ext_resource type="Script" uid="uid://8otynt36578r" path="res://juego3/casilla_mapa.gd" id="1_yq0yu"]
+
+[node name="casilla_mapa" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yq0yu")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+texture_filter = 1
+anchor_mode = 0
+zoom = Vector2(2.634, 2.634)

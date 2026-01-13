@@ -10,4 +10,4 @@ imagenFicha = ExtResource("1_t17uh")
 imagenSet = ExtResource("2_jrdcn")
 id = 6
 nombre = "Sapito Morado"
-coste = 4
+coste = 18

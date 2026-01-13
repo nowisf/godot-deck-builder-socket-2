@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://buv8umlard0ah" path="res://mostrador_set/mostrador_set.tscn" id="3_m48o8"]
 [ext_resource type="Script" uid="uid://bicukv1ofyckv" path="res://main_menu/nombre_set_combate_label.gd" id="4_6tl50"]
 [ext_resource type="PackedScene" uid="uid://c4w7h3st8mh0o" path="res://set_selector/set_selector_scroll_container.tscn" id="5_3f7m4"]
-[ext_resource type="PackedScene" uid="uid://dbp17g14a0sys" path="res://panel_desplasable/panel_desplazable.tscn" id="5_6tl50"]
+[ext_resource type="PackedScene" uid="uid://dbp17g14a0sys" path="res://panel_desplazable/panel_desplazable.tscn" id="5_6tl50"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f8xy"]
 bg_color = Color(0.42448848, 0.5116399, 0.8104448, 0.38039216)
@@ -2160,6 +2160,7 @@ layout_mode = 1
 offset_left = 0.0
 
 [node name="EsperandoPartidaPanelDesplazable" parent="." instance=ExtResource("5_6tl50")]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_bottom = 1.0

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cwmcbticqgj6n" path="res://imagenes/Espacio vacio mazo tdvs.png" id="1_3rdq1"]
 [ext_resource type="Script" uid="uid://bcvabi5atecj8" path="res://Juego2/Fichas/ficha_set/ficha_set.gd" id="2_takd4"]
 [ext_resource type="StyleBox" uid="uid://cvjehboxjs3fp" path="res://Styles/ButtonHoverCreacionSets.tres" id="3_ghct0"]
-[ext_resource type="Texture2D" uid="uid://lcorwv774y3v" path="res://imagenes/Escencia.png" id="3_n07in"]
+[ext_resource type="Texture2D" uid="uid://lcorwv774y3v" path="res://imagenes/interfaz_combate/Escencia.png" id="3_n07in"]
 [ext_resource type="StyleBox" uid="uid://b15genq3lrf5m" path="res://Styles/ButtonFocusCreacionSets.tres" id="4_t2dd0"]
 [ext_resource type="Shader" uid="uid://bxy806m5npbot" path="res://Juego2/Fichas/ficha_set/color_shader.gdshader" id="5_86ohq"]
 [ext_resource type="Texture2D" uid="uid://bk8ehmvvqiwts" path="res://imagenes/margen resaltante.png" id="6_t2dd0"]

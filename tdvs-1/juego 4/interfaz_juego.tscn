@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://b31680j7fs25x"]
+
+[ext_resource type="Script" uid="uid://c1dhse5lqqp7v" path="res://juego 4/interfaz_juego.gd" id="1_uwral"]
+[ext_resource type="Script" uid="uid://bi0yvvdrq7886" path="res://juego 4/set_juego.gd" id="2_pv1cd"]
+[ext_resource type="Texture2D" uid="uid://dw5tax26281rq" path="res://imagenes/interfaz_combate/Escencia_Holder.png" id="3_uwral"]
+
+[node name="InterfazJuego" type="CanvasLayer"]
+script = ExtResource("1_uwral")
+
+[node name="SetJuego" type="VBoxContainer" parent="."]
+z_index = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 133.0
+offset_right = 167.0
+offset_bottom = 138.0
+grow_vertical = 2
+script = ExtResource("2_pv1cd")
+
+[node name="EscenciaJugador" type="TextureRect" parent="."]
+z_index = -1
+texture_filter = 1
+offset_right = 168.0
+offset_bottom = 132.0
+texture = ExtResource("3_uwral")
+
+[node name="CantidadEscencia" type="Label" parent="EscenciaJugador"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -28.0
+offset_right = 10.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 3
+text = "0
+"
+horizontal_alignment = 1

@@ -45,7 +45,6 @@ func _on_fichas_poseidas_establecidas(_fichas_poseidas):
 func vaciar():
 	casillas = []
 	for child in contenedorDeFilas.get_children():
-		print(child)
 		child.queue_free()
 
 

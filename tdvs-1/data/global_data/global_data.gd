@@ -18,14 +18,17 @@ func establecer_fichas_poseidas(fichas_poseidas_nuevas:Array[int]):
 	fichas_poseidas = fichas_poseidas_nuevas
 	fichas_poseidas_establecidas.emit(fichas_poseidas)
 
+# FICHASRESOURCE
 signal fichas_establecidas(fichas)
 @export var fichas:Array[FichaResource]
-@export var fichas_dict:Dictionary
+@export var fichas_dict: Dictionary[int, FichaResource] = {}
 func establecer_fichas(fichas_nuevas:Array[FichaResource]):
 	fichas = fichas_nuevas
 	for ficha in fichas:
 		fichas_dict[ficha.id] = ficha
 	fichas_establecidas.emit(fichas)
+func get_ficha_base_por_id(id: int) -> FichaResource:
+	return fichas_dict.get(id)
 
 signal set_agregado(sets:SetResource)
 signal sets_vaciados()
@@ -36,9 +39,21 @@ func agregar_set(nuevo_set:SetResource):
 func vaciar_sets():
 	sets = []
 	sets_vaciados.emit()
+func get_set_por_nombre(nombre: String) -> SetResource:
+	for s in sets:
+		if s.nombre == nombre:
+			return s
+	return null
 
 signal set_para_combatir_escogido(set_resource:SetResource)
 @export var set_para_combatir:SetResource
 func set_set_para_combatir(set_resource:SetResource):
 	set_para_combatir = set_resource
-	set_para_combatir_escogido.emit(set_resource)
+	set_para_combatir_escogido.emit()
+	
+func resetear():
+	vaciar_sets()
+	set_set_para_combatir(null)
+	establecer_fichas_poseidas([])
+	establecer_nombre_usuario("")
+	

@@ -8,3 +8,5 @@ class_name FichaResource
 @export var id: int
 @export var nombre: String
 @export var coste: int
+
+#cds

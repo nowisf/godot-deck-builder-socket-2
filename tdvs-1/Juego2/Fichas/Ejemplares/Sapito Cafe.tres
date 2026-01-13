@@ -10,4 +10,4 @@ imagenFicha = ExtResource("1_clve0")
 imagenSet = ExtResource("2_23fp8")
 id = 3
 nombre = "Sapito Cafe"
-coste = 1
+coste = 15

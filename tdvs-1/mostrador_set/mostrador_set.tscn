@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://buv8umlard0ah"]
+[gd_scene load_steps=2 format=3 uid="uid://buv8umlard0ah"]
 
 [ext_resource type="Script" uid="uid://8alm4p02otne" path="res://mostrador_set/mostrador_set.gd" id="1_g2hfd"]
-[ext_resource type="PackedScene" uid="uid://b6mjda2nau3xk" path="res://mostrador_set/ficha_set_mostrador/ficha_set_mostrador.tscn" id="2_poxwb"]
 
 [node name="mostrador_set" type="VBoxContainer"]
 offset_left = 27.0
@@ -10,4 +9,3 @@ offset_right = 227.0
 offset_bottom = 576.0
 theme_override_constants/separation = 2
 script = ExtResource("1_g2hfd")
-ficha_set_mostrador_scene = ExtResource("2_poxwb")

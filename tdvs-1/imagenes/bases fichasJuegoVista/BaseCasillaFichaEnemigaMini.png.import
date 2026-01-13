@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lcorwv774y3v"
-path="res://.godot/imported/Escencia.png-fc2c2b5e8b9856216c655b4a7e7ad0e7.ctex"
+uid="uid://cnykyy4ejmble"
+path="res://.godot/imported/BaseCasillaFichaEnemigaMini.png-384995490d813aca4e83e37e514a803b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/Escencia.png"
-dest_files=["res://.godot/imported/Escencia.png-fc2c2b5e8b9856216c655b4a7e7ad0e7.ctex"]
+source_file="res://imagenes/bases fichasJuegoVista/BaseCasillaFichaEnemigaMini.png"
+dest_files=["res://.godot/imported/BaseCasillaFichaEnemigaMini.png-384995490d813aca4e83e37e514a803b.ctex"]
 
 [params]
 

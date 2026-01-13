@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ifa0y0o81ajr"]
+
+[ext_resource type="Script" uid="uid://cxbtmlbq1wkin" path="res://juego 4/vida_progress_bar/vida_progress_bar.gd" id="1_yd13n"]
+
+[sub_resource type="Theme" id="Theme_loumr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gocgd"]
+bg_color = Color(0.9411765, 0, 0, 1)
+skew = Vector2(0.7, 0)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1wf7"]
+bg_color = Color(0, 1, 0, 1)
+skew = Vector2(0.7, 0)
+shadow_size = 2
+
+[node name="Vida ProgressBar" type="ProgressBar"]
+custom_minimum_size = Vector2(0, 6)
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = 7.0
+grow_horizontal = 2
+theme = SubResource("Theme_loumr")
+theme_override_styles/background = SubResource("StyleBoxFlat_gocgd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e1wf7")
+value = 100.0
+show_percentage = false
+script = ExtResource("1_yd13n")

@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://7jqpwyusgmu4"]
+
+[ext_resource type="Texture2D" uid="uid://bjcbwvafrauei" path="res://imagenes/SapitoCeleste mazo.png" id="1_0pf6w"]
+[ext_resource type="PackedScene" uid="uid://ifa0y0o81ajr" path="res://juego 4/vida_progress_bar/vida_progress_bar.tscn" id="1_kmb6u"]
+[ext_resource type="Texture2D" uid="uid://dw2mqhxniw2bc" path="res://imagenes/interfaz_combate/cardHolderConGemaTDVS.png" id="2_v3kg7"]
+[ext_resource type="PackedScene" uid="uid://d04r5y0ff0mmr" path="res://panel info/panel_habilidad.tscn" id="4_hj21l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6dcg"]
+bg_color = Color(0.03137255, 0.050980393, 0.05490196, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.5694608, 0.37832278, 0.22930983, 1)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+corner_detail = 1
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8n2ct"]
+color = Color(0.5694608, 0.37832278, 0.22930983, 1)
+
+[node name="PanelInfoFicha" type="PanelContainer"]
+offset_right = 210.0
+offset_bottom = 123.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o6dcg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Vida ProgressBar" parent="VBoxContainer" instance=ExtResource("1_kmb6u")]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Vida ProgressBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -11.5
+offset_right = 30.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VidaActual Label" type="Label" parent="VBoxContainer/Vida ProgressBar/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "VA"
+
+[node name="Separacion Label" type="Label" parent="VBoxContainer/Vida ProgressBar/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "/"
+
+[node name="VidaMaxima Label" type="Label" parent="VBoxContainer/Vida ProgressBar/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "VM"
+
+[node name="Carta TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_v3kg7")
+
+[node name="Retrato TextureRect" type="TextureRect" parent="VBoxContainer/Carta TextureRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -8.0
+offset_right = 204.0
+offset_bottom = 42.0
+texture = ExtResource("1_0pf6w")
+
+[node name="Coste Label" type="Label" parent="VBoxContainer/Carta TextureRect/Retrato TextureRect"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 20.0
+offset_right = 192.0
+offset_bottom = 43.0
+theme_override_constants/outline_size = 5
+text = "10"
+horizontal_alignment = 1
+
+[node name="Nombre Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "$Nombre"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_8n2ct")
+
+[node name="Estadisticas GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_8n2ct")
+
+[node name="PanelHabilidad" parent="VBoxContainer" instance=ExtResource("4_hj21l")]
+layout_mode = 2

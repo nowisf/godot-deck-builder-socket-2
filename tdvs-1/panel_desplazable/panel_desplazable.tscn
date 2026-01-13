@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbp17g14a0sys"]
 
-[ext_resource type="Script" uid="uid://gwxx7c8qkos2" path="res://panel_desplasable/panel_desplazable.gd" id="1_dn86j"]
+[ext_resource type="Script" uid="uid://gwxx7c8qkos2" path="res://panel_desplazable/panel_desplazable.gd" id="1_dn86j"]
 
 [node name="PanelDesplazable" type="Panel"]
 anchors_preset = 10

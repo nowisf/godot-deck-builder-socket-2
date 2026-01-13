@@ -8,7 +8,6 @@ signal boton_registrar_presionado()
 func _ready() -> void:
 	Socket.mensaje_recibido.connect(_on_socket_mensaje_recibido)
 func _on_socket_mensaje_recibido(mensaje):
-	print(mensaje)
 	if(mensaje.type == "login_respuesta"):
 		if(mensaje.ok):
 			login_ok.emit($Panel/VBoxContainer/UsernameInput.text)

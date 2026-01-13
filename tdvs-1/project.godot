@@ -1,16 +1,8 @@
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
-
 config_version=5
 
 [application]
 
-config/name="TDVS 1"
+config/name="TDVS"
 run/main_scene="uid://bju2p4ayn6gr1"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://imagenes/icon.svg"
@@ -25,8 +17,18 @@ ManagerFichas="*res://Juego2/Fichas/Ejemplares/manager_fichas.gd"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://imagenes/": "green",
+"res://juego 4/procesadores por evento/": "pink",
+"res://juego3/": "red"
+}
 
 [rendering]
 

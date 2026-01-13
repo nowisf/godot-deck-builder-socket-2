@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://n2qt1v7ltla0"]
+
+[ext_resource type="Script" uid="uid://cwrqiiiypunqg" path="res://juego 4/casilla_escalable.gd" id="1_7goic"]
+[ext_resource type="Texture2D" uid="uid://bgfdv6yxjj1tp" path="res://imagenes/CasillaSueloDark.png" id="2_auhr1"]
+[ext_resource type="Texture2D" uid="uid://bmidseyx40s3b" path="res://imagenes/valdosas/nieblaDeGuerraTDVS.png" id="3_auhr1"]
+
+[node name="CasillaEscalable" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_7goic")
+"tamaño_objetivo" = 300
+
+[node name="Base" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_auhr1")
+centered = false
+
+[node name="Button" type="Button" parent="Base"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Niebla" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+texture = ExtResource("3_auhr1")
+centered = false
+
+[connection signal="pressed" from="Base/Button" to="." method="_on_button_pressed"]

@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="FichaResource" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="FichaResource" load_steps=4 format=3 uid="uid://5beq2te4fp5e"]
 
-[ext_resource type="Texture2D" path="res://imagenes/sapitoPom.png" id="1_d38yp"]
-[ext_resource type="Texture2D" path="res://imagenes/sapito mazo.png" id="2_mhcqw"]
-[ext_resource type="Script" path="res://Juego2/Fichas/Ejemplares/ficha_resource.gd" id="3_cyo0v"]
+[ext_resource type="Texture2D" uid="uid://djtqbe35h5xfo" path="res://imagenes/sapitoPom.png" id="1_d38yp"]
+[ext_resource type="Texture2D" uid="uid://bcmqpsw3m55ke" path="res://imagenes/sapito mazo.png" id="2_mhcqw"]
+[ext_resource type="Script" uid="uid://diwpxr1lvcbox" path="res://Juego2/Fichas/Ejemplares/ficha_resource.gd" id="3_cyo0v"]
 
 [resource]
 script = ExtResource("3_cyo0v")
 imagenFicha = ExtResource("1_d38yp")
 imagenSet = ExtResource("2_mhcqw")
 nombre = "Sapito"
-coste = 2
+coste = 1

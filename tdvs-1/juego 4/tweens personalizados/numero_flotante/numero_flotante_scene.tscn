@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://ld6mib27jkyu"]
+
+[ext_resource type="Script" uid="uid://ddyjvyx8382mn" path="res://juego 4/tweens personalizados/numero_flotante/numero_flotante.gd" id="1_u1jjc"]
+
+[node name="NumeroFlotante" type="Node2D"]
+z_index = 2
+script = ExtResource("1_u1jjc")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 26
+text = "
+"

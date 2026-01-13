@@ -1,4 +1,5 @@
 extends Panel
+class_name PanelDesplazable
 
 var posicion_inicial: Vector2
 

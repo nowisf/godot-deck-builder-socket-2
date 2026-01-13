@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdi11jxgrqwlx"]
+
+[ext_resource type="Script" uid="uid://gcd14v4n44pm" path="res://juego3/ficha_juego_vista.gd" id="1_0hlic"]
+[ext_resource type="Texture2D" uid="uid://l753k22hkw1l" path="res://imagenes/bases fichasJuegoVista/BaseCasillaFichaAliada.png" id="2_cs4e4"]
+[ext_resource type="Texture2D" uid="uid://bhyq3dtk7ayu0" path="res://imagenes/fichasJuegoVista/SapitoThugLife FJ.png" id="2_o7ivh"]
+
+[node name="FichaJuegoVista" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0hlic")
+
+[node name="Base" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_cs4e4")
+
+[node name="Ficha" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_o7ivh")
+centered = false

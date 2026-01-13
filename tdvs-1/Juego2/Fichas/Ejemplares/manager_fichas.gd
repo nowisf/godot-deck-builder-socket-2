@@ -7,12 +7,13 @@ const IMAGENES_PATH := "res://imagenes/"
 const FICHAS_PATH := "res://Juego2/Fichas/Ejemplares/"
 
 
-func actualizar_fichas(diccionario_fichas:Dictionary):
+func actualizar_fichas(diccionario_fichas:Array):
 	borrar_todas_las_fichas()
-	for key in diccionario_fichas.keys():
-		diccionario_fichas[key].id = key
-		crear_ficha(diccionario_fichas[key])
-
+	#for key in diccionario_fichas.keys():
+		#diccionario_fichas[key].id = key
+		#crear_ficha(diccionario_fichas[key])
+	for ficha in diccionario_fichas:
+		crear_ficha(ficha)
 
 func crear_ficha(diccionario_ficha:Dictionary):
 	var ficha = FichaResource.new()
@@ -21,10 +22,6 @@ func crear_ficha(diccionario_ficha:Dictionary):
 	ficha.imagenSet = load(IMAGENES_PATH + diccionario_ficha.imagenSet) 
 	ficha.coste = diccionario_ficha.coste
 	ficha.id = diccionario_ficha.id
-	
-	
-	
-	print(diccionario_ficha)
 
 	var file_path = FICHAS_PATH + diccionario_ficha.nombre + ".tres"
 	ResourceSaver.save(ficha, file_path)
