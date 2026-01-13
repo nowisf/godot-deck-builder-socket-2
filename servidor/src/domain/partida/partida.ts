@@ -60,6 +60,8 @@ export class Partida {
     if (idx >= 0) {
       this.fichasEnJuego.splice(idx, 1);
     }
+
+    ficha.muerta = true;
   }
 
   ejecutarTurno() {

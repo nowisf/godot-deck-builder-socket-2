@@ -359,6 +359,10 @@ export const generadorEfectos: GeneradorEfectos = {
     const { ficha, partida } = ctx;
     return () => {
       partida.motorWego.agregarEfecto(() => {
+        if (ficha.muerta) {
+          return;
+        }
+
         if (!partida.tablero.puedeAvanzar(ficha)) {
           return;
           //Aqui va la victoria?

@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2026-01-12T08:11:25.063Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="tVm3hBE3zsJ-t0uMQemC" version="22.1.16" type="device">
+<mxfile host="Electron" modified="2026-01-13T04:22:37.345Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="A9lylHNMPZ-yTwyZGN65" version="22.1.16" type="device">
   <diagram name="Página-1" id="1mFK69zLF_5rZ9FnkaEO">
     <mxGraphModel dx="2127" dy="907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -727,8 +727,14 @@
         <mxCell id="gzPQ-0gHRIV-ExjRcGTn-17" value="hechiceros/&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="1850" y="3790" width="360" height="87" as="geometry" />
         </mxCell>
-        <mxCell id="Jx_T0WpeUscHrufu_9kn-1" value="normalizar Fichas y fichasBAse&lt;br&gt;(valores por defecto)" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+        <mxCell id="Jx_T0WpeUscHrufu_9kn-1" value="si una ficha no vista por el enemigo ataca y cura un aliado no visto por el enemigo en otra casilla ¿crashea front?" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="2640" y="2160" width="360" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Jx_T0WpeUscHrufu_9kn-2" value="si una ficha camina hacia un lugar oscuro tengo que eliminarla" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="2380" y="1940" width="360" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Jx_T0WpeUscHrufu_9kn-3" value="si una ficha camina hacia un lugar oscuro tengo que eliminarla" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="2250" y="2160" width="360" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

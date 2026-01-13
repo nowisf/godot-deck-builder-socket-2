@@ -24,6 +24,8 @@ export class Ficha {
 
   public habilidades: Habilidad[] = [];
 
+  public muerta: boolean = false;
+
   constructor(public base: FichaBase, public amo: Jugador) {
     // Copia stats base
     this.stats = { ...base.stats };
