@@ -33,6 +33,7 @@ func vicion_perdida():
 	
 	for lista_fichas in fichas_por_bando:
 		for ficha:FichaEscalable in fichas_por_bando[lista_fichas]:
+			print("wwwww, : ",ficha.ficha_resource.nombre)
 			ficha.perder_vicion()
 	
 func cambiar_visibilidad(esVisible:bool):

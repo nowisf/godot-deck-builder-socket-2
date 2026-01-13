@@ -112,12 +112,16 @@ func get_size():
 
 
 func perder_vicion(demora = 0.5, duracion = 0.8):
+	print("ficha perder vicion: ",ficha_resource.nombre)
 	var tween_fade = create_tween()
 	tween_fade.tween_interval(demora) 
 	tween_fade.tween_property(self, "modulate:a", 0.0, duracion)
 	borrando.emit()
-	tween_fade.tween_callback(queue_free)
+	tween_fade.tween_callback(testqq)
 
+func testqq():
+	print("ficha perder vicion testqq: ",ficha_resource.nombre)
+	queue_free()
 
 func animacion_muerte_pieza_tablero():
 	var tween = ficha.create_tween()

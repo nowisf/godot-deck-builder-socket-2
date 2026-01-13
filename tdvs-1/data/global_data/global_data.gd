@@ -49,7 +49,7 @@ signal set_para_combatir_escogido(set_resource:SetResource)
 @export var set_para_combatir:SetResource
 func set_set_para_combatir(set_resource:SetResource):
 	set_para_combatir = set_resource
-	set_para_combatir_escogido.emit()
+	set_para_combatir_escogido.emit(set_resource)
 	
 func resetear():
 	vaciar_sets()
